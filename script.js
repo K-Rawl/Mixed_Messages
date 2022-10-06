@@ -6,7 +6,7 @@ const madeUpAnimalFacts = {
     animal: ['Monkeys', 'Dogs', 'Elephants', 'Fish', 'Birds', 'Turtles'],
     habitats: ['jungles', 'deserts', 'grassy plains', 'caves', 'rivers', 'houses'],
     food: ['bananas', 'meat', 'grass', 'algae', 'berries', 'insects']
-}
+};
 
 let newAnimalFact = [];
 
