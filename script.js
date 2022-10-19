@@ -8,21 +8,28 @@ const madeUpAnimalFacts = {
     food: ['bananas', 'meat', 'grass', 'algae', 'berries', 'insects']
 };
 
-let newAnimalFact = [];
+let newAnimalFact = ['Animal Fact: '];
 
-for (let i = 0; i < madeUpAnimalFacts.length; i++) {
-    let arrIndex = generateRandNum(madeUpAnimalFacts[i]);
-    console.log(i);
+for (key in madeUpAnimalFacts) {
+    
+    let arrIndex = generateRandNum(madeUpAnimalFacts[key]);
 
-    if(i === animal) {
-        newAnimalFact.push(`${madeUpAnimalFacts[i][arrIndex]} live in `);
-        return newAnimalFact;
-    } else if (i === habitats) {
-        newAnimalFact.push(`${madeUpAnimalFacts[i][arrIndex]} and eat `);
-    } else if (i === food) {
-        newAnimalFact.push(`${madeUpAnimalFacts[i][arrIndex]}.`);
+    if(key === 'animal') {
+        newAnimalFact.push(`${madeUpAnimalFacts[key][arrIndex]} live in `);
+    } else if (key === 'habitats') {
+        newAnimalFact.push(`${madeUpAnimalFacts[key][arrIndex]} and eat `);
+    } else if (key === 'food') {
+        newAnimalFact.push(`${madeUpAnimalFacts[key][arrIndex]}.`);
     }
 }
+
+function arrToString(arrName) 
+{
+    const strAnimalFact = arrName.join('');
+    return strAnimalFact;
+}
+  
+console.log(arrToString(newAnimalFact));
 
 function arrToString(arrName) 
 {
